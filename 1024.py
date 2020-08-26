@@ -155,8 +155,8 @@ class Autoreply:
 
     def getreply(self):
         #自定义回复内容，记得修改随机数
-        reply=['1024','感谢分享','感谢你的分享','谢谢分享','多谢分享']
-        reply_m=random.randint(0,4)
+        reply=['1024','感谢分享','谢谢分享','多谢分享']
+        reply_m=random.randint(0,3)
         reply_news=reply[reply_m]
         self.reply_news=reply_news.encode('gb2312')
         self.logger.debug("本次回复内容是:"+reply_news)
@@ -253,7 +253,7 @@ if __name__ == "__main__":
         auto.browse()
         auto.getreply()
         auto.getmatch()
-        sleeptime=random.randint(1024,2048)
+        sleeptime=random.randint(1024,1536)
         au=auto.postreply()
         if au=='回复成功':
             auto.debug('回复成功')
