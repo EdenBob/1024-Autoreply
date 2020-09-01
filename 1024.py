@@ -5,7 +5,7 @@ import onetimepass as otp
 from time import sleep
 from urllib import parse
 import os
-from getver1 import Getver
+from getver import Getver
 import logging
 
 class Autoreply:
@@ -155,8 +155,8 @@ class Autoreply:
 
     def getreply(self):
         #自定义回复内容，记得修改随机数
-        reply=['1024','感谢分享','谢谢分享','多谢分享']
-        reply_m=random.randint(0,3)
+        reply=['感谢分享','谢谢分享','多谢分享']
+        reply_m=random.randint(0,2)
         reply_news=reply[reply_m]
         self.reply_news=reply_news.encode('gb2312')
         self.logger.debug("本次回复内容是:"+reply_news)
